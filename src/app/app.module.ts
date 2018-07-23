@@ -2,14 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
-import { MywalletTranscationComponentComponent } from './mywallet-transcation-component/mywallet-transcation-component.component';
+import { BlankpageComponent } from './blankpage/blankpage.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { WalletTranscationComponent } from './wallet-transcation/wallet-transcation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponentComponent,
-    MywalletTranscationComponentComponent
+    BlankpageComponent,
+    PagenotfoundComponent,
+    WalletTranscationComponent
   ],
   imports: [
     BrowserModule,
