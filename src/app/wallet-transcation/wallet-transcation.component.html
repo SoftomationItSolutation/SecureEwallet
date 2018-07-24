@@ -1,3 +1,45 @@
-<p>
-  wallet-transcation works!
-</p>
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-5 align-self-center">
+            <h6 class="page-title">Transcation Id</h6>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">{{TranscationId}}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-7 align-self-center">
+            <div class="d-flex no-block justify-content-end align-items-center">
+                <div class="m-r-10">
+                    <div class="lastmonth"></div>
+                </div>
+                <div class=""><small>Amount</small>
+                    <h4 class="text-info m-b-0 font-medium">{{TranscationAmount}}</h4></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+       <div class="col-12">
+           <div class="card">
+               <div class="card-body">
+                    <div class="fit">
+                        <ngx-braintree 
+                            [clientTokenURL]="'http://api.softomation.in/api/braintree/getclienttoken'" 
+                            [createPurchaseURL]="'http://api.softomation.in/api/braintree/createpurchase'" 
+                            [chargeAmount]="TranscationAmount"
+                            (paymentStatus)="onPaymentStatus($event)"
+                            (dropinLoaded)="onDropinLoaded($event)"
+                            [buttonText]="'Make Payment'"
+                            [showCardholderName]="true"
+                            [currency]="'INR'">
+                        </ngx-braintree>
+                    </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>

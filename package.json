@@ -27,10 +27,13 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "ngx-braintree": "^6.1.2",
     "ngx-spinner": "^6.0.0",
     "ngx-webstorage": "^2.0.1",
+    "npm": "^6.2.0",
     "popper.js": "^1.14.3",
     "rxjs": "^6.0.0",
+    "rxjs-compat": "^6.2.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
