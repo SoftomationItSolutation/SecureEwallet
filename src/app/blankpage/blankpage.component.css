@@ -39,10 +39,10 @@ body {
   }
   
   .circles p {
-      font-size: 240px;
-      color: #fff;
-      padding-top: 60px;
-      position: relative;
+    font-size: 240px;
+    color: #FF6F00;
+    padding-top: 60px;
+    position: relative;
     z-index: 9;
     line-height: 100%;
   }

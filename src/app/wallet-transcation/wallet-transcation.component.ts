@@ -65,6 +65,7 @@ export class WalletTranscationComponent implements OnInit {
             this.TranscationDetails=JSON.parse(data.json());
             this.TranscationId=this.TranscationDetails.TranscationId;
             this.TranscationAmount=this.TranscationDetails.Amount;
+           
             setInterval(() => { this.GenerateTocken(); }, 2000);
             }
             else{
@@ -84,11 +85,12 @@ export class WalletTranscationComponent implements OnInit {
         .subscribe((clientToken: string) => {
             this.clientToken = clientToken;
             this.clientTokenNotReceived = false;
+            
             this.interval = setInterval(() => { this.createDropin(); }, 0);
         }, (error) => {
             this.spinner.hide();
             this.clientTokenNotReceived = true;
-            console.log(`Client token not received. Please make sure your braintree server api is configured properly, running and accessible.`);
+            console.log('Client token not received. Please make sure your braintree server api is configured properly, running and accessible.');
         });
   }
 
@@ -110,8 +112,7 @@ export class WalletTranscationComponent implements OnInit {
   }
   
   onPaymentStatus(response): void {
-    this.auth.paymentResponse.emit(response);
-    this.router.navigate(['/TranscationStatus?TID='+this.TranscationId]);
+    this.auth.setSession('TranscationStatus',this.TranscationDetails,response);
   }
 
 }

@@ -8,11 +8,12 @@
           <section>
             <p>{{message}}</p>
           </section>
-          <!-- <section>
-              <a class="button primary back" href="/checkouts/new">
-                  <span>Test Another Transaction</span>
-              </a>
-          </section> -->
+          <section>
+            <div id="dvCountDown" style="display: none" class="root">
+                You will be redirected after <span id = "lblCount"></span>&nbsp;seconds.
+            </div>
+          </section>
       </div>
   </div>
+  <ngx-spinner bdColor="rgba(51,51,51,0.5)" size="medium" color="#fff" type="line-spin-fade-rotating"></ngx-spinner>
 </div>

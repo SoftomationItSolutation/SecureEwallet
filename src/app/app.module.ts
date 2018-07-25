@@ -10,7 +10,7 @@ import { BlankpageComponent } from './blankpage/blankpage.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { WalletTranscationComponent } from './wallet-transcation/wallet-transcation.component';
 import { TranscationStatusComponent } from './transcation-status/transcation-status.component';
-
+import { Ng2Webstorage } from '../../node_modules/ngx-webstorage';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { TranscationStatusComponent } from './transcation-status/transcation-sta
     HttpModule,
     NgxSpinnerModule,
     NgxBraintreeModule, 
-    HttpClientModule 
+    HttpClientModule,
+    Ng2Webstorage
   ],
   providers: [],
   bootstrap: [AppComponent]
